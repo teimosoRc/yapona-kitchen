@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
+=======
+import React from "react";
+>>>>>>> a1e14b9ad97dfb47b8240a2ee0bcd48ab0528213
 import style from "./MealList.module.css";
 import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 
+<<<<<<< HEAD
 function MealList() {
   const [meals, setMeals] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -40,6 +45,39 @@ function MealList() {
   }
 
   const mealList = meals.map((meal) => (
+=======
+const DUMMY_MEALS = [
+  {
+    id: "m1",
+    name: 'Ролл "Наоми"',
+    description:
+      "Сыр Филадельфия, куриное филе, масаго, помидор, огурец, кунжут",
+    price: 11.99,
+  },
+  {
+    id: "m2",
+    name: "Спайс в лососе",
+    description: "Рис, лосось, соус спайс",
+    price: 3.99,
+  },
+  {
+    id: "m3",
+    name: "Суши с угрем",
+    description: "Угорь копченый, соус унаги, кунжут",
+    price: 4.99,
+  },
+  {
+    id: "m4",
+    name: 'Салат "Поке с лососем"',
+    description:
+      "Рис, лосось, огурец, чука, нори, стружка тунца, соус ореховый",
+    price: 7.99,
+  },
+];
+
+function MealList() {
+  const mealList = DUMMY_MEALS.map((meal) => (
+>>>>>>> a1e14b9ad97dfb47b8240a2ee0bcd48ab0528213
     <MealItem
       key={meal.id}
       id={meal.id}
@@ -48,7 +86,10 @@ function MealList() {
       price={meal.price}
     />
   ));
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1e14b9ad97dfb47b8240a2ee0bcd48ab0528213
   return (
     <section className={style.meals}>
       <Card>
